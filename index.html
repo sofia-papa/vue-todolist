@@ -19,8 +19,14 @@
 </head>
 <body>
 
-    <div id="app">
-       
+    <div id="app" class="text-center">
+        <h1>HOME</h1>
+        <input type="text" placeholder="inserisci le cose che mancano">
+       <ul>
+           <li v-for="accessori in listaCasa">
+               {{ accessori }}
+           </li>
+       </ul>
     </div>
     
     <script type="text/javascript" src="js/myscript.js">
