@@ -21,10 +21,12 @@
 
     <div id="app" class="text-center">
         <h1>HOME</h1>
-        <input type="text" placeholder="inserisci le cose che mancano">
+        <input type="text" placeholder="inserisci le cose che mancano" v-model = "aggiungiLista" @keyup.enter="onkeyupevent">
+        <button @click="aggiungiElemento">Aggiungi elemento</button>
        <ul>
-           <li v-for="accessori in listaCasa">
-               {{ accessori }}
+           <li v-for="(accessori, index) in listaCasa">
+               {{ accessori }} -- {{ index }}
+               <i class="fas fa-check-circle" @click="eliminaElemento(index)"></i>
            </li>
        </ul>
     </div>

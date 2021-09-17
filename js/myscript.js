@@ -13,9 +13,25 @@ let app = new Vue({
     data : {
 
         listaCasa : ["comodino", "sedia", "poltrona", "piatti", "bicchieri", "posate"],
+        aggiungiLista : "",
     },
 
     methods: {
-        
+
+        eliminaElemento : function (deleteElement){
+            this.listaCasa.splice(deleteElement, 1);
+            console.log (listaCasa);
+
+        },
+
+        aggiungiElemento : function () {
+            this.listaCasa.push(this.aggiungiLista);
+            this.aggiungiLista = "";
+
+        },
+
+        onkeyupevent : function (event) {
+            this.aggiungiElemento();
+        },
     }
 });
