@@ -21,7 +21,8 @@
 
     <div id="app" class="text-center">
         <h1>HOME</h1>
-        <input type="text" placeholder="inserisci le cose che mancano" v-model = "aggiungiLista" @keyup.enter="onkeyupevent">
+        <input type="text" placeholder="inserisci le cose che mancano"
+         v-model = "aggiungiLista" @keyup.enter="aggiungiElemento()">
         <button @click="aggiungiElemento">Aggiungi elemento</button>
        <ul>
            <li v-for="(accessori, index) in listaCasa">
